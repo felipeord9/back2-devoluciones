@@ -195,8 +195,6 @@ const sendMail = async (req, res, next) => {
         {
           from: config.smtpEmail,
           to: body.destiny,
-          //to: body?.agency?.contacto?.email,
-          //cc: body.seller.tercero ? body.seller.tercero.contacto.email : body.seller.mailCommercial,
           subject: "¡DEVOLUCIONES Y AVERÍAS!",
           attachments,
           html: `
@@ -593,10 +591,9 @@ const sendMailAuth = async (req, res, next) => {
         transporter.sendMail(
         {
           from: config.smtpEmail,
-          to: 'logisticayumbo@granlangostino.net',
-          cc: body?.user.email,
-          //to: body?.agency?.contacto?.email,
-          //cc: body.seller.tercero ? body.seller.tercero.contacto.email : body.seller.mailCommercial,
+          to: 'sistemas2@granlangostino.net',
+          /* to: 'logisticayumbo@granlangostino.net',
+          cc: body?.user.email, */
           subject: "¡SOLICITUD DE DEVOLUCIONES Y AVERÍAS AUTORIZADA!",
           attachments,
           html: `
@@ -1000,10 +997,9 @@ const sendMailReject = async (req, res, next) => {
         transporter.sendMail(
         {
           from: config.smtpEmail,
-          to: 'asist.inventario01@granlangostino.net',
-          cc: body?.user.email,
-          //to: body?.agency?.contacto?.email,
-          //cc: body.seller.tercero ? body.seller.tercero.contacto.email : body.seller.mailCommercial,
+          to: 'sistemas2@granlangostino.net',
+          /* to: 'asist.inventario01@granlangostino.net',
+          cc: body?.user.email, */
           subject: "¡SOLICITUD DEVOLUCIONES Y AVERÍAS RECHAZADA!",
           attachments,
           html: `
@@ -1418,9 +1414,8 @@ const sendMailRecogido = async (req, res, next) => {
         transporter.sendMail(
         {
           from: config.smtpEmail,
-          to: 'asist.inventario01@granlangostino.net',
-          //to: body?.agency?.contacto?.email,
-          //cc: body.seller.tercero ? body.seller.tercero.contacto.email : body.seller.mailCommercial,
+          to: 'sistemas2@granlangostino.net',
+          /* to: 'asist.inventario01@granlangostino.net', */
           subject: "¡DEVOLUCIONES Y AVERÍAS RECOGIDA!",
           attachments,
           html: `
@@ -1840,10 +1835,9 @@ const sendMailEnd = async (req, res, next) => {
         transporter.sendMail(
         {
           from: config.smtpEmail,
-          to: 'asist.inventario01@granlangostino.net',
-          cc: 'auditoriacontable@granlangostino.net',
-          //to: body?.agency?.contacto?.email,
-          //cc: body.seller.tercero ? body.seller.tercero.contacto.email : body.seller.mailCommercial,
+          to: 'sistemas2@granlangostino.net',
+          /* to: 'asist.inventario01@granlangostino.net',
+          cc: 'auditoriacontable@granlangostino.net', */
           subject: "¡FINALIZACION SOLICITUD DEVOLUCIONES Y AVERÍAS!",
           attachments,
           html: `
