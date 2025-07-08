@@ -593,7 +593,7 @@ const sendMailAuth = async (req, res, next) => {
         transporter.sendMail(
         {
           from: config.smtpEmail,
-          to: 'sistemas2@granlangostino.net',
+          to: 'logisticayumbo@granlangostino.net',
           cc: body?.user.email,
           //to: body?.agency?.contacto?.email,
           //cc: body.seller.tercero ? body.seller.tercero.contacto.email : body.seller.mailCommercial,
