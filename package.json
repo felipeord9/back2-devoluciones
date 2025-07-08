@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js ",
+    "dev": "nodemon src/index.js",
+    "migrations:generate": "sequelize-cli migration:generate --name",
+    "migrations:run": "sequelize-cli db:migrate",
+    "migrations:revert": "sequelize-cli db:migrate:undo"
+  },
+  "keywords": [],
+  "author": "Jhonatan Castrillón <jhonatancastrillon34@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "16.1.4",
+    "express": "4.18.2",
+    "html-pdf": "3.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "6.9.3",
+    "pg": "8.11.0",
+    "sequelize": "6.32.0",
+    "sequelize-cli": "6.6.1",
+    "tedious": "^16.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
