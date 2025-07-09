@@ -591,9 +591,9 @@ const sendMailAuth = async (req, res, next) => {
         transporter.sendMail(
         {
           from: config.smtpEmail,
-          to: 'sistemas2@granlangostino.net',
-          /* to: 'logisticayumbo@granlangostino.net',
-          cc: body?.user.email, */
+          /* to: 'sistemas2@granlangostino.net', */
+          to: 'logisticayumbo@granlangostino.net',
+          cc: body?.user.email,
           subject: "¡SOLICITUD DE DEVOLUCIONES Y AVERÍAS AUTORIZADA!",
           attachments,
           html: `
@@ -997,9 +997,9 @@ const sendMailReject = async (req, res, next) => {
         transporter.sendMail(
         {
           from: config.smtpEmail,
-          to: 'sistemas2@granlangostino.net',
-          /* to: 'asist.inventario01@granlangostino.net',
-          cc: body?.user.email, */
+          /* to: 'sistemas2@granlangostino.net', */
+          to: 'asist.inventario01@granlangostino.net',
+          cc: body?.user.email,
           subject: "¡SOLICITUD DEVOLUCIONES Y AVERÍAS RECHAZADA!",
           attachments,
           html: `
@@ -1414,8 +1414,8 @@ const sendMailRecogido = async (req, res, next) => {
         transporter.sendMail(
         {
           from: config.smtpEmail,
-          to: 'sistemas2@granlangostino.net',
-          /* to: 'asist.inventario01@granlangostino.net', */
+          /* to: 'sistemas2@granlangostino.net', */
+          to: 'asist.inventario01@granlangostino.net',
           subject: "¡DEVOLUCIONES Y AVERÍAS RECOGIDA!",
           attachments,
           html: `
@@ -1835,9 +1835,9 @@ const sendMailEnd = async (req, res, next) => {
         transporter.sendMail(
         {
           from: config.smtpEmail,
-          to: 'sistemas2@granlangostino.net',
-          /* to: 'asist.inventario01@granlangostino.net',
-          cc: 'auditoriacontable@granlangostino.net', */
+          /* to: 'sistemas2@granlangostino.net', */
+          to: 'asist.inventario01@granlangostino.net',
+          cc: 'auditoriacontable@granlangostino.net',
           subject: "¡FINALIZACION SOLICITUD DEVOLUCIONES Y AVERÍAS!",
           attachments,
           html: `
