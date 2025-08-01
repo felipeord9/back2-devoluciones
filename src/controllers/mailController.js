@@ -999,7 +999,7 @@ const sendMailReject = async (req, res, next) => {
           from: config.smtpEmail,
           /* to: 'sistemas2@granlangostino.net', */
           to: 'asist.inventario01@granlangostino.net',
-          cc: body?.user.email,
+          cc: `${body?.user.email}, control.inventario@granlangostino.net`,
           subject: "¡SOLICITUD DEVOLUCIONES Y AVERÍAS RECHAZADA!",
           attachments,
           html: `
@@ -1416,6 +1416,7 @@ const sendMailRecogido = async (req, res, next) => {
           from: config.smtpEmail,
           /* to: 'sistemas2@granlangostino.net', */
           to: 'asist.inventario01@granlangostino.net',
+          cc: 'control.inventario@granlangostino.net',
           subject: "¡DEVOLUCIONES Y AVERÍAS RECOGIDA!",
           attachments,
           html: `
@@ -1837,7 +1838,7 @@ const sendMailEnd = async (req, res, next) => {
           from: config.smtpEmail,
           /* to: 'sistemas2@granlangostino.net', */
           to: 'asist.inventario01@granlangostino.net',
-          cc: 'auditoriacontable@granlangostino.net',
+          cc: 'auditoriacontable@granlangostino.net, control.inventario@granlangostino.net',
           subject: "¡FINALIZACION SOLICITUD DEVOLUCIONES Y AVERÍAS!",
           attachments,
           html: `
