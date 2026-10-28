@@ -13,6 +13,21 @@ const findAllAgencies = async (req, res, next) => {
   }
 };
 
+const findOneAgency = async (req, res, next) => {
+  try {
+    const { params : { id }} = req
+    const data = await AgencyService.findOne(id)
+
+    res.status(200).json({
+      message: 'OK',
+      data
+    })
+  } catch (error) {
+    next(error)
+  }
+}
+
 module.exports = {
-  findAllAgencies
+  findAllAgencies,
+  findOneAgency,
 }

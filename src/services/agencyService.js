@@ -33,6 +33,19 @@ const find = () => {
   return agencies;
 };
 
+const findOne = (id) => {
+  const agency = models.Agencia.findOne({
+    attributes: ['id', 'descripcion'],
+    include: ['contacto'],
+    where: {id: id}
+  })
+
+  if(!agency) throw new Error('No se encontro la agencia')
+
+  return agency
+}
+
 module.exports = {
-  find
+  find,
+  findOne,
 };
